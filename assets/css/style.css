@@ -1,0 +1,38 @@
+/* Lade dir die Google Font´s runter und binde diese lokal in deinem Projekt ein.
+Erstelle ein Logo mit deinem Namen.
+Benutze <nav> und <a> Tags um deine Navigationsleiste aufzubauen.
+Benutze die Display Property um es in die richtige Position zu bringen.
+Hier findet Ihr die komplette Figma vorlage & Übersicht.  
+ */
+
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter/static/Inter-Regular.ttf);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  font-family: Inter;
+  align-items: baseline;
+  padding: 20px 0px;
+}
+
+header h1 {
+  font-size: 1rem;
+  color: rgb(254, 158, 190);
+  letter-spacing: 0.2rem;
+}
+
+header nav a {
+  color: black;
+  text-decoration: none;
+  margin: 20px;
+}
+
+header nav a:last-of-type {
+  background-color: rgb(254, 158, 190);
+  color: white;
+  padding: 3px 40px;
+  border-radius: 13px;
+}
