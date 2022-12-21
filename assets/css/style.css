@@ -1,21 +1,23 @@
-/* Lade dir die Google Font´s runter und binde diese lokal in deinem Projekt ein.
-Erstelle ein Logo mit deinem Namen.
-Benutze <nav> und <a> Tags um deine Navigationsleiste aufzubauen.
-Benutze die Display Property um es in die richtige Position zu bringen.
-Hier findet Ihr die komplette Figma vorlage & Übersicht.  
- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
 
 @font-face {
   font-family: Inter;
-  src: url(../fonts/Inter/static/Inter-Regular.ttf);
+  src: url("../fonts/Inter/static/Inter-Regular.ttf");
 }
-
+@font-face {
+  font-family: "Inter bold";
+  src: url("../fonts/Inter/static/Inter-Bold.ttf");
+}
 header {
   display: flex;
   justify-content: space-between;
-  font-family: Inter;
   align-items: baseline;
-  padding: 20px 0px;
+  padding: 40px 20px;
 }
 
 header h1 {
@@ -32,7 +34,118 @@ header nav a {
 
 header nav a:last-of-type {
   background-color: rgb(254, 158, 190);
+  border: 2px solid rgb(254, 158, 190);
+
   color: white;
   padding: 3px 40px;
   border-radius: 13px;
+}
+
+/* about me */
+
+main {
+  padding-inline: 200px;
+  margin-top: 150px;
+}
+#aboutme article:first-of-type {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container p {
+  text-transform: uppercase;
+  margin-block: 10px;
+}
+
+.container p:first-of-type::before {
+  content: url("../img/arrow.svg");
+  width: 95px;
+  height: 8px;
+  margin-right: 10px;
+}
+
+.container h2 {
+  font-size: 4rem;
+}
+
+.container p:first-of-type {
+  color: rgb(254, 158, 190);
+}
+
+/* button */
+.container a {
+  text-decoration: none;
+  background-color: rgb(254, 158, 190);
+  color: white;
+  padding: 10px 40px;
+  border-radius: 30px;
+  width: fit-content;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  border: 2px solid rgb(254, 158, 190);
+}
+
+.container a:hover,
+header nav a:last-of-type:hover {
+  background-color: white;
+  color: rgb(254, 158, 190);
+}
+
+.profilePic img {
+  width: 400px;
+  position: relative;
+  z-index: 3;
+}
+
+.profilePic::before {
+  content: " ";
+  position: absolute;
+  background-color: rgb(254, 158, 190);
+  width: 400px;
+  height: 600px;
+  right: 170px;
+  top: 280px;
+  z-index: 1;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.title {
+  margin-right: 40px;
+}
+
+h3 {
+  font-size: 6rem;
+  font-family: "Inter bold";
+  height: fit-content;
+}
+
+h3:last-of-type {
+  text-indent: 80px;
+  line-height: 70px;
+}
+
+.description p {
+  width: 600px;
+}
+
+nav a img {
+  height: 50px;
+  width: 50px;
+}
+
+.links {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
 }
