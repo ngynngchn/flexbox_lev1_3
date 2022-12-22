@@ -46,12 +46,16 @@ header nav a:last-of-type {
 /* about me */
 
 main {
-  padding-inline: 200px;
+  display: flex;
+  justify-content: center;
+  /* padding-inline: 200px; */
   margin-top: 150px;
 }
+
 #aboutme article:first-of-type {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
@@ -88,7 +92,7 @@ main {
   padding: 10px 40px;
   border-radius: 30px;
   width: fit-content;
-  margin-top: 20px;
+  margin-block: 20px;
   font-size: 1.5rem;
   border: 2px solid rgb(254, 158, 190);
 }
@@ -125,7 +129,9 @@ span {
 
 .description {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 50px;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 200px;
 }
